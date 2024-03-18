@@ -14,6 +14,7 @@ RUN tar -xvf apache-tomcat-8.5.99.tar.gz && \
     mv apache-tomcat-8.5.99 tomcat
 
 # Install Java
+RUN yum update
 RUN yum install java -y && \
     yum clean all
 
