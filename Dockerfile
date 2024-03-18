@@ -22,7 +22,8 @@ WORKDIR /opt/tomcat
 
 # Copy WAR file, MySQL connector, and context configuration
 COPY student.war webapps/student.war
-COPY mysql-connector.jar lib/mysql-connector.jar
+ADD https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar lib/mysql-connector.jar
+#COPY mysql-connector.jar lib/mysql-connector.jar
 COPY context.xml conf/context.xml
 
 # Expose port 8080
