@@ -5,7 +5,7 @@ LABEL app="studentapp"
 LABEL DevopsEngg="Adarsh"
 WORKDIR /opt
 ADD https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.tar.gz .
-RUN tar -xvf apache-tomcat-8.5.99
+RUN tar -xvf apache-tomcat-8.5.99.tar.gz
 RUN yum install java -yum
 WORKDIR /opt/apache-tomcat-8.5.99
 COPY student.war  webapps/student.war
